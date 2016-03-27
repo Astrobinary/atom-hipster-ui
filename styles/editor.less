@@ -1,0 +1,20 @@
+@import "ui-variables";
+@import "ui-mixins";
+atom-text-editor[mini] {
+    color: #333;
+    background-color: #ebebeb;
+    border: 1px solid #ebebeb;
+    &:focus {
+        border: 1px solid #1abc9c;
+    }
+    border-radius: @component-border-radius;
+    padding-left: @component-padding/2;
+    .cursor {
+        border-color: @input-text-color;
+    }
+}
+atom-text-editor[mini].is-focused {
+    background-color: #1abc9c;
+    border: 1px solid #1abc9c;
+    color: #fafafa;
+}

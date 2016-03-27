@@ -1,0 +1,110 @@
+@import "ui-variables";
+
+@tab-radius: 0;
+@tab-top-padding: 0;
+@tab-left-padding: 15px;
+@tab-right-padding: 10px;
+@modified-icon-width: 8px;
+
+.tab-bar {
+  height: @tab-height + @tab-top-padding;
+  background-color: @tab-bar-background-color;
+
+
+  .tab {
+    height: @tab-height;
+    line-height: @tab-height;
+    margin-top: @tab-top-padding;
+    padding-left: @tab-left-padding;
+    background-color: @tab-background-color;
+    border-top-left-radius: @tab-radius;
+    border-top-right-radius: @tab-radius;
+    border-left: 1px solid @tab-border-color;
+    color: @tab-text-color;
+    font-size: @font-size;
+
+    &:first-child {
+      border-left: 0;
+
+      .title {
+        padding-left: @tab-left-padding;
+      }
+    }
+
+    .close-icon {
+      opacity: 0;
+      z-index: 3;
+      top: -1px;
+      right: @tab-right-padding;
+      color: @tab-text-color;
+
+      &:hover {
+        color: @tab-background-color-active;
+      }
+    }
+
+    &:hover {
+	background-color: #16a085;
+      .close-icon {
+        opacity: 1;
+      }
+    }
+
+    &.modified:not(:hover) .close-icon {
+      opacity: 1;
+      top: @tab-height/2 - @modified-icon-width/2;
+      right: @tab-right-padding + 4px;
+      width: @modified-icon-width;
+      height: @modified-icon-width;
+      border-color: @tab-text-color;
+    }
+
+    &.modified:hover .close-icon {
+      color: @tab-text-color;
+
+      &:hover {
+        color: @tab-background-color-active;
+      }
+    }
+  }
+
+  .tab.active {
+    z-index: 10;
+    background-color: @tab-background-color-active;
+    border-color: @tab-background-color-active;
+    color: @tab-text-color-active;
+
+    &+.tab {
+      border-color: @tab-background-color-active;
+    }
+
+    .close-icon {
+      opacity: 1;
+      color: @tab-text-color-active;
+
+      &:hover {
+        color: @tab-background-color;
+      }
+    }
+
+    &.modified:not(:hover) .close-icon {
+      border-color: @tab-text-color-active;
+    }
+
+    &.modified:hover .close-icon {
+      color: @tab-text-color-active;
+
+      &:hover {
+        color: @tab-background-color;
+      }
+    }
+  }
+
+  .placeholder {
+    height: @tab-height + @tab-top-padding;
+
+    &:after {
+      top: @tab-height + @tab-top-padding;
+    }
+  }
+}

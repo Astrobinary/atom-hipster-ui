@@ -6,4 +6,4 @@ A lightish UI theme inspired by flat design.
 
 
 
-![Screenshot](https://github.com/Agnostics/atom-hipster-ui/raw/master/screenshot.png)
+![Screenshot](http://res.cloudinary.com/dc0qy42qr/image/upload/v1459120617/screenshot_zqbcou.png)

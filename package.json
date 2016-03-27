@@ -1,7 +1,7 @@
 {
   "name": "atom-hipster-ui",
   "theme": "ui",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A light UI theme inspired by hipster flat design.",
   "license": "MIT",
   "repository": "https://github.com/agnostics/atom-hipster-ui",

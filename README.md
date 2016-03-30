@@ -6,4 +6,4 @@ A lightish UI theme inspired by flat design.
 
 
 
-![Screenshot](http://res.cloudinary.com/dc0qy42qr/image/upload/v1459120617/screenshot_zqbcou.png)
+![Screenshot](https://dl.dropboxusercontent.com/u/11776715/Web%20Assets/Atom%20Hipster/screenshot.png)

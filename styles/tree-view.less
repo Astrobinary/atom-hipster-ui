@@ -1,5 +1,14 @@
 @import "ui-variables";
+
 .tree-view {
-    background-color: @tree-view-background-color;
+	background-color: @tree-view-background-color;
     background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/gplaypattern.png");
+
+	.tree-view-root {
+		background-color: transparent !important;
+	}
+
+	.file.entry {
+		color: @tree-view-font-color;
+	}
 }

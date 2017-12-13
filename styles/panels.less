@@ -1,32 +1,52 @@
 @import "ui-mixins";
 @import "ui-variables";
 @import "buttons";
+
 .panel {
     &.bordered {
         border: 5px solid @base-border-color;
         border-radius: @component-border-radius;
     }
 }
+
 .tool-panel {
     color: #333;
     position: relative;
     background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/gplaypattern.png");
-    a {
+
+	a {
         color: #333;
     }
-    .status-bar {
+
+	.find-and-replace .options-label .options {
+		color: @text-color-subtle;
+	}
+
+    status-bar {
         linter-bottom-tab {
             color: #fafafa;
         }
+
+		a {
+			.text-inverted(normal);
+
+			&:hover {
+				.text-inverted(highlight);
+			}
+		}
+
         .cursor-position {
-            a {
+            a,
+			a:hover {
                 color: #1abc9c;
             }
         }
     }
+
     & atom-panel.bottom {
         font-size: @font-size;
     }
+
     section {
         .input-block-item {
             .btn-group {
@@ -39,17 +59,16 @@
         }
     }
 }
+
 .inset-panel {
     position: relative;
     background-color: @inset-panel-background-color;
 }
-.is-blurred {
-    .inset-panel,
-    .tool-panel {}
-}
+
 .panel-heading {
     .text(normal);
     background-color: @panel-heading-background-color;
+
     .btn {
         padding-left: 8px;
         padding-right: 8px;
